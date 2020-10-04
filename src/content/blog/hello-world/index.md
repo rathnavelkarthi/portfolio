@@ -1,17 +1,58 @@
 ---
-title: "Hello World"
+title: "How to use exploit spy on aws"
 tags: ["Hello", "World", "First", "Post"]
-description: "999"
+description: "1"
 author: "Rathnavel"
-date: "2020-05-12"
+date: "4-10-2020"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget augue commodo, rutrum enim vel, varius lorem. Ut nec sem metus. Cras laoreet, metus consectetur mollis consectetur, dui ante tempus ante, eget luctus felis odio sed leo. Sed tempus, ex ultrices porttitor fringilla, enim tellus dictum elit, quis viverra odio orci eu erat. Maecenas auctor ultrices ornare. Mauris consequat a urna in cursus.
+First Create a ec2 instance in aws. (only for educational purpose)
 
-Mauris hendrerit, sem sit amet dapibus ultrices, lacus quam malesuada lorem, interdum lacinia tortor augue maximus mauris. Aliquam ultrices, lectus ac semper dictum, nisi eros sollicitudin purus, nec pharetra massa diam eu libero. Integer at metus vitae urna placerat vehicula. Donec ut sagittis risus, sed mattis mi. Donec suscipit, ex vitae finibus faucibus, nisl est eleifend justo, quis porta ante massa sed arcu. Morbi dapibus, massa sit amet posuere porta, sapien tellus malesuada ipsum, et vehicula nunc diam vel lacus. Donec fringilla viverra massa vitae aliquet.
+Choose any linux distro ( I have used ubuntu ).
 
-Etiam velit tellus, ornare eu justo sit amet, euismod feugiat velit. Curabitur interdum nisi arcu, vel molestie mi interdum et. Quisque non porta mi. Phasellus condimentum aliquet magna ut placerat.
 
-Ut mollis suscipit accumsan. Vivamus molestie est vitae rhoncus scelerisque. Vivamus metus nisi, tristique at vulputate a, euismod in neque. Praesent ullamcorper quam id ex iaculis tristique. Aliquam odio lorem, aliquet et dictum eu, faucibus vel ante. Aliquam quis nibh nisl. Quisque dictum massa non consectetur accumsan. Curabitur lobortis eros non tortor commodo, non iaculis nibh venenatis. Praesent vel augue id enim vulputate accumsan quis sit amet dui. In et sapien id elit viverra lobortis eget vitae dui. Duis vel porta massa. Vivamus tempor malesuada tellus quis fringilla.
+while creating a instance,Create it with the acess to ssh,http and https protpcols.
 
-Etiam nec commodo orci, quis sollicitudin ex. Nulla quis imperdiet felis. Sed dictum lacinia suscipit. Donec sit amet sollicitudin augue, id consectetur magna. Donec mattis gravida odio, ac rhoncus arcu tempor ac. Integer non porta ex, at feugiat mauris. Nunc auctor purus sit amet sapien tincidunt porttitor. Mauris et quam id metus bibendum malesuada varius et justo. Nunc dignissim mi quis risus faucibus, eget placerat metus pretium.
+Then follow these acess.
+
+Connect to your server via SSH  
+
+Install JRE 9+
+
+Debian, Ubuntu, Etc
+
+sudo apt install openjdk-11-jre-headless
+
+Fedora, Oracle, Red Hat, etc
+
+sudo yum install java-11-openjdk-devel"
+
+To use pm2 you should install nodejs first.
+
+install PM2
+
+sudo npm install pm2 -g
+
+Clone this repository
+
+git clone https://github.com/XploitWizer/XploitSPY.git
+
+Now change to the server directory in the xploitspy dir and run these commands
+
+npm install <- install dependencies
+
+sudo pm2 start index.js <-- start the script
+
+sudo pm2 startup <- to run XploitSPY on startup
+
+Default Username: admin & Default Password: password
+
+In your browser navigate to http://<public ip thats been given to you by the aws>
+  
+This is my xploitspy server. (dont try the Same login id cause i have chaged lol)
+
+http://18.224.37.145/ 
+
+DO CHECK MY PROJECT TO
+
+https://www.rathnavelkarthi.in/projects/hello-world/
