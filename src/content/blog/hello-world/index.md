@@ -3,7 +3,7 @@ title: "How to use exploit spy on aws"
 tags: ["Hello", "World", "First", "Post"]
 description: "1"
 author: "Rathnavel"
-date: "4-10-2020"
+date: "2020-04-10"
 ---
 
 First Create a ec2 instance in aws. (only for educational purpose)
